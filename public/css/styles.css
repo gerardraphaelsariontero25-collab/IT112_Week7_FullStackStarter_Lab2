@@ -1,0 +1,269 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: 'Inter', sans-serif;
+    color: #f5f7ff;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(108, 92, 231, 0.18), transparent 30%),
+        radial-gradient(circle at 85% 80%, rgba(0, 191, 255, 0.12), transparent 30%),
+        #080b14;
+}
+
+header {
+    background: rgba(10, 13, 25, 0.9);
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+header h1,
+header h2,
+header h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+
+.card {
+    background: rgba(255, 255, 255, 0.06) !important;
+
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+
+    border-radius: 16px !important;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    transition: 0.25s ease;
+
+    animation: fadeIn 0.6s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(108, 92, 231, 0.4) !important;
+
+    box-shadow: 0 18px 40px rgba(70, 60, 200, 0.18);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+
+label {
+    color: #c9d0e3;
+
+    font-weight: 500;
+}
+
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 12px !important;
+
+    background: rgba(255, 255, 255, 0.05) !important;
+
+    color: white !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+
+    border-radius: 9px !important;
+
+    outline: none;
+
+    transition: 0.25s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    background: rgba(255, 255, 255, 0.08) !important;
+
+    border-color: #7567ff !important;
+
+    box-shadow: 0 0 0 3px rgba(117, 103, 255, 0.15) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #737c94;
+}
+
+
+button,
+.btn-primary {
+    background: linear-gradient(
+        135deg,
+        #6c5ce7,
+        #00bfff
+    ) !important;
+
+    color: white !important;
+
+    border: none !important;
+
+    border-radius: 9px !important;
+
+    font-weight: 600;
+
+    padding: 10px 20px;
+
+    transition: 0.25s ease;
+
+    box-shadow: 0 7px 18px rgba(80, 100, 255, 0.25);
+}
+
+button:hover,
+.btn-primary:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(80, 100, 255, 0.4);
+}
+
+button:active,
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.btn-danger {
+    background: transparent !important;
+
+    color: #ff6680 !important;
+
+    border: 1px solid rgba(255, 102, 128, 0.5) !important;
+
+    border-radius: 8px !important;
+
+    transition: 0.25s ease;
+}
+
+.btn-danger:hover {
+    background: rgba(255, 102, 128, 0.1) !important;
+
+    border-color: #ff6680 !important;
+
+    transform: translateY(-2px);
+}
+
+
+.list-group-item {
+    background: rgba(255, 255, 255, 0.04) !important;
+
+    color: white !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+
+    border-radius: 10px !important;
+
+    margin-bottom: 10px;
+
+    transition: 0.25s ease;
+}
+
+.list-group-item:hover {
+    background: rgba(255, 255, 255, 0.07) !important;
+
+    border-color: rgba(108, 92, 231, 0.35) !important;
+}
+
+
+.list-group-item strong {
+    color: #ffffff;
+}
+
+
+.list-group-item small {
+    color: #9da7bd !important;
+}
+
+
+.typing {
+    font-family: 'Space Grotesk', sans-serif;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    border-right: 2px solid #7567ff;
+
+    animation:
+        typing 3s steps(30, end),
+        blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}
